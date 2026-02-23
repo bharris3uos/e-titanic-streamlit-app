@@ -103,7 +103,11 @@ if predict_button:
 
     if y_pred[0] == 0:
         st.error('This passenger is predicted to have **died**.')
-    
+        st.image(
+            'https://miro.medium.com/1*zyYiHYZlMvKLRaFZXellAQ.gif',
+            caption='Sad outcome',
+            use_column_width=True
+        )
     else:
         st.success('This passenger is predicted to have **survived**.')
 
