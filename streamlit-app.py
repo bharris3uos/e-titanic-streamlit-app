@@ -83,6 +83,60 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+
+# ===== Full-screen Background + Frosted Glass =====
+st.markdown("""
+    <style>
+    /* Full-page background image */
+    .stApp {
+        background: url('https://www.bbc.co.uk/newsround/68569886') no-repeat center center fixed !important;
+        background-size: cover !important;
+    }
+
+    /* Optional: If external URL is blocked, comment ^ and use a local image:
+       .stApp { background: url('background.jpg') no-repeat center center fixed !important; background-size: cover !important; }
+    */
+
+    /* Frosted glass containers (main + sidebar) */
+    .main, [data-testid="stSidebar"] {
+        background: rgba(255, 255, 255, 0.55) !important; /* translucent white layer */
+        -webkit-backdrop-filter: blur(8px) saturate(110%) !important;
+        backdrop-filter: blur(8px) saturate(110%) !important;
+        border-radius: 12px;
+    }
+
+    /* Improve spacing so the glass panels don't stick to the edges */
+    .block-container {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    [data-testid="stSidebar"] {
+        padding: 1rem 0.6rem !important;
+    }
+
+    /* Make widgets also sit on subtle glass cards */
+    .stContainer, .stRadio, .stSelectbox, .stNumberInput, .stDateInput, .stTextInput, .stPassword, .stFileUploader, .stDataFrame {
+        background: rgba(255, 255, 255, 0.50) !important;
+        border-radius: 10px;
+        padding: 0.25rem 0.35rem;
+    }
+
+    /* Keep data table readable */
+    thead tr th {
+        background: rgba(76, 139, 245, 0.9) !important;
+        color: #fff !important;
+    }
+
+    /* Keep buttons visible atop glass */
+    .stButton>button {
+        position: relative;
+        z-index: 1;
+    }
+    </style>
+""", unsafe_allow_html=True)
+``
+
+
 # ======================================================
 # PASSWORD PROTECTION
 # ======================================================
