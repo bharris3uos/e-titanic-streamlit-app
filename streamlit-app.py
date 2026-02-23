@@ -7,6 +7,67 @@ import pandas as pd
 import joblib
 from datetime import date
 
+# ===== Modern UI Styling =====
+st.markdown("""
+    <style>
+
+    /* Global background */
+    .main {
+        background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+    }
+
+    /* Sidebar background */
+    [data-testid="stSidebar"] {
+        background: linear-gradient(135deg, #1f3c88 0%, #2e5aac 100%);
+        color: white;
+    }
+
+    /* Sidebar text */
+    [data-testid="stSidebar"] * {
+        color: #ffffff !important;
+        font-weight: 500;
+    }
+
+    /* Buttons */
+    .stButton>button {
+        background: #4c8bf5;
+        color: white;
+        padding: 0.6rem 1.5rem;
+        border-radius: 8px;
+        border: none;
+        font-size: 1rem;
+        transition: 0.2s ease-in-out;
+    }
+
+    .stButton>button:hover {
+        background: #2f6fed;
+        transform: scale(1.02);
+    }
+
+    /* Prediction message containers */
+    .stSuccess, .stError {
+        padding: 1rem;
+        border-radius: 10px;
+        font-size: 1.1rem;
+    }
+
+    /* Headers */
+    h1, h2, h3 {
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: 700;
+        color: #1a2e66;
+    }
+
+    /* Tables */
+    thead tr th {
+        background-color: #4c8bf5 !important;
+        color: white !important;
+    }
+
+    </style>
+""", unsafe_allow_html=True)
+
+
 # =========================
 # Password check
 # =========================
